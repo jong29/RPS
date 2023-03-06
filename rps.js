@@ -41,22 +41,27 @@ function game() {
     }
 }
 
+function showResult(s) {
+    const results = document.querySelector("#results");
+    const result = document.createElement('div');
+    result.textContent = s;
+    results.appendChild(result);
+}
+
 // game();
 let gamesPlayed = 0;
 document.querySelector("#rock").addEventListener("click", () => {
-    console.log(playRound('rock', getComputerChoice()));
+    showResult(playRound('rock', getComputerChoice()));
     gamesPlayed++;
-    console.log(gamesPlayed);
 });
 
 document.querySelector("#paper").addEventListener("click", () => {
-    console.log(playRound('paper', getComputerChoice()));
+    showResult(playRound('paper', getComputerChoice()));
     gamesPlayed++;
-    console.log(gamesPlayed);
 });
 
 document.querySelector("#scissors").addEventListener("click", () => {
-    console.log(playRound('scissors', getComputerChoice()));
+    showResult(playRound('scissors', getComputerChoice()));
     gamesPlayed++;
-    console.log(gamesPlayed);
 });
+
