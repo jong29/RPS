@@ -41,4 +41,22 @@ function game() {
     }
 }
 
-game();
+// game();
+let gamesPlayed = 0;
+document.querySelector("#rock").addEventListener("click", () => {
+    console.log(playRound('rock', getComputerChoice()));
+    gamesPlayed++;
+    console.log(gamesPlayed);
+});
+
+document.querySelector("#paper").addEventListener("click", () => {
+    console.log(playRound('paper', getComputerChoice()));
+    gamesPlayed++;
+    console.log(gamesPlayed);
+});
+
+document.querySelector("#scissors").addEventListener("click", () => {
+    console.log(playRound('scissors', getComputerChoice()));
+    gamesPlayed++;
+    console.log(gamesPlayed);
+});
